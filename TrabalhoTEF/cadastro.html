@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho TEF</title>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel="stylesheet" href="./content/index.css">
+    <script>
+        function onSignIn(googleUser) {
+          // Useful data for your client-side scripts:
+          var profile = googleUser.getBasicProfile();
+          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+          console.log('Full Name: ' + profile.getName());
+          console.log('Given Name: ' + profile.getGivenName());
+          console.log('Family Name: ' + profile.getFamilyName());
+          console.log("Image URL: " + profile.getImageUrl());
+          console.log("Email: " + profile.getEmail());
+  
+          // The ID token you need to pass to your backend:
+          var id_token = googleUser.getAuthResponse().id_token;
+          console.log("ID Token: " + id_token);
+        }
+                function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('check')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            })
+        }
+        function alert() {
+            prompt("Digite algo para confirmar o cadastro.");
+        }
+      </script>
+          <meta name="google-signin-scope" content="profile email">
+          <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <img src="./content/spotifyBg.png" class="bg_img">
+    <div class="body">
+        <img src="./content/userIMG.png" width="35px">
+        <input type="number" placeholder="CPF*"> 
+        <input type="text" placeholder="Primeiro Nome*">
+        <input type="text" placeholder="Sobrenome*">
+        <div>   
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data de Nascimento <input type="date">
+            
+            <input type="radio" name="check" onclick="onlyOne(this)"> Masculino
+            <input type="radio" name="check" onclick="onlyOne(this)"> Feminino
+            <input type="radio" name="check" onclick="onlyOne(this)"> Outros
+        </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="Telefone Celular*">
+            <input type="email" placeholder="E-mail*">
+            <select>
+                <option> UF </option>
+                <option> AC </option>
+                <option> AP </option>
+                <option> AM </option>
+                <option> BA </option>
+                <option> CE </option>
+                <option> DF </option>
+                <option> ES </option>
+                <option> GO </option>
+                <option> MA </option>
+                <option> MT </option>
+                <option> MS </option>
+                <option> MG </option>
+                <option> PA </option>
+                <option> PB </option>
+                <option> PR </option>
+                <option> PE </option>
+                <option> PI </option>
+                <option> RJ </option>
+                <option> RN </option>
+                <option> RS </option>
+                <option> RO </option>
+                <option> RR </option>
+                <option> SC </option>
+                <option> SP </option>
+                <option> SE </option>
+                <option> TO </option>
+            </select>
+            <div></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Senha (6 digitos)">
+            <input type="password" placeholder="Confirmar senha">
+            <div></div>
+            <label class="example-send-yourself-copy">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
+                <span class="label-body">Estou de acordo com o Regulamento.</span>
+              </label>
+              <label class="example-send-yourself-copy">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
+                <span class="label-body">
+                    Estou ciente da Política de Privacidade e do Aviso Complementar de Privacidade do Programa.</span>
+              </label>
+              <label class="example-send-yourself-copy">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
+                <span class="label-body">
+                    Aceito receber sms no telefone informado.</span>
+              </label>
+              <label class="example-send-yourself-copy">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
+                <span class="label-body">
+                    Aceito receber mensagens no whatsapp no telefone informado.</span>
+              </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./inicial.html"><button class="button-primary" onclick="alert()">Confirmar cadastro</button> </a>
+
+        </div>
+    </div>
+    
+</body>
+</html>

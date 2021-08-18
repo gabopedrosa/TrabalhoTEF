@@ -5,6 +5,14 @@
     max-width: 1000px;
     border-radius: 10px;
 }
+.body2{
+    padding:10px;
+    background: rgb(255, 255, 255);
+    margin: 3% auto 100px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
 
 .alignBtn{
     display: flex;
